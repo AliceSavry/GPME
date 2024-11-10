@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>T1C1 - L’environnement économique et comptable de l’entreprise</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="09be66a2-ef59-4385-a569-9391682ac979" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🛳️</span></div><h1 class="page-title">T1C1 - L’environnement économique et comptable de l’entreprise</h1><p class="page-description"></p></header><div class="page-body"><p id="5c90e740-24bf-496f-8635-407f93a17036" class="">
+</p><table id="9c2c1160-0f12-4da3-9125-6ef3bc811f9f" class="simple-table"><tbody><tr id="ff11b31d-23ea-4ba4-89ee-281860248872"><td id="Znc|" class="" style="width:349px">Nom de l’entreprise</td><td id="jqtV" class="" style="width:349px">Développe ton potentiel</td></tr><tr id="55d2cf4e-cb96-42b6-9e3b-39d08e40a44a"><td id="Znc|" class="" style="width:349px">Activité</td><td id="jqtV" class="" style="width:349px">Formation et coaching en développement personnel</td></tr><tr id="feaa848a-51f9-4b06-909e-9dcd74a4b02d"><td id="Znc|" class="" style="width:349px">Associés</td><td id="jqtV" class="" style="width:349px">Tous les étudiants de votre classe</td></tr><tr id="45fbe293-d679-4e90-b9e1-4b68f748f024"><td id="Znc|" class="" style="width:349px">RAF</td><td id="jqtV" class="" style="width:349px">Alice Savry </td></tr><tr id="663e2048-89a8-4469-87f3-27e84ad1c6de"><td id="Znc|" class="" style="width:349px">Forme juridique</td><td id="jqtV" class="" style="width:349px">SAS - Société par Action Simplifiées</td></tr></tbody></table><h1 id="39dc5686-3458-4135-b160-c66029c9a33e" class="">Comment choisir la forme juridique d’une entreprise?</h1><p id="abae44a0-c532-4245-b95a-e24636bafa74" class="">Différence entre Entreprise individuelle et société  :</p><figure id="4bb2e7ab-485c-425e-9768-896c5e5e9e43" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-10_a_16.14.05.png"><img style="width:447.98614501953125px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-10_a_16.14.05.png"/></a></figure><p id="17642455-a769-48f0-909e-928dbc36ee6c" class="">En entreprise individuelle, la responsabilité du chef d’entreprise est illimitée, c’est à dire qu’il est responsable des dettes de l’entreprise sur son patrimoine personnel (exception faite de la résidence principale qui est réputée insaisissable). L’entreprise individuelle fait partie de la personne physique qu’est le gérant. Son existence est conditionnée à l’existence du chef d’entreprise. Le jour ou celui-ci vient à décéder, l’entreprise individuelle cesse d’exister, et sera répartie entre les héritiers du chef d’entreprise.</p><figure id="919d4596-03bf-4f47-b396-2ea4cbfe0a77" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-10_a_16.14.31.png"><img style="width:665.9896240234375px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-10_a_16.14.31.png"/></a></figure><p id="71fd77c3-8454-488f-acb9-aae6ef8ad2d1" class="">Une société est une personne morale, née de la volonté de un ou plusieurs associés. </p><p id="5cf0a2bd-ea4f-4111-b1e9-a8ad4977b1d2" class="">Les associés versent un capital de départ à la société, qui s’en servira pour commencer à travailler.</p><p id="42f982fb-da4a-49da-b562-49e6790a8f67" class="">La responsabilité des associés est limité aux apports, c’est à dire qu’en cas de défaillance de la société, les associés ne risquent de perdre que le capital qu’ils ont apporté. Ils ne sont absolument pas tenus de payer les dettes de la société sur leur patrimoine propre SAUF si le gérant associé a fait une faute de gestion.</p><p id="fc39505d-9671-47e9-b54b-68db0d0e3a73" class="">Il existe plusieurs formes de sociétés, en PME(entreprises entre 20 et 500 salariés) les SARL et SAS sont privilégiées.</p><ul id="196b041c-c0af-4671-9bc6-41367cc893c9" class="bulleted-list"><li style="list-style-type:disc">SARL : Société à responsabilité limitée : société de personnes (on s’associe avec une personnalité et non avec un portefeuille). </li></ul><ul id="0907cc07-3f1e-4408-90c1-32c6403097ec" class="bulleted-list"><li style="list-style-type:disc">SAS : Société par Actions Simplifiées : société de capitaux (on s’associe avec un portefeuille et non avec une personne). A la différence de la SARL, la SAS permet une optimisation fiscale et sociale, et permet de ne pas payer de cotisations sociales sur les dividendes versés aux associés.</li></ul><h1 id="d0427d20-c0c4-4047-baf4-2ac42a3e215c" class="">Le début d’activité</h1><h2 id="0597648f-287b-4de4-aba4-21c15393320f" class="">Les besoins : </h2><p id="3aed971b-a41d-4c6c-9df4-61be1673bd88" class="">Pour pouvoir commencer à travailler, nous avons besoin de </p><ul id="eb1b0a5c-5992-4deb-9196-5ef5dfb04f91" class="bulleted-list"><li style="list-style-type:disc">une clientèle ⇒ obtenue par prospection, publicité</li></ul><ul id="143e7d5f-307c-4e2c-8f1d-88f63190b3df" class="bulleted-list"><li style="list-style-type:disc">des salariés ⇒ contrats signés </li></ul><ul id="d12b9b06-5af3-4d77-9f8a-b3bd5dfb6fbf" class="bulleted-list"><li style="list-style-type:disc">outil de production ⇒ bureaux, ordinateurs, machines …</li></ul><ul id="31bfc92c-3cc1-4e19-a0cc-7640e58ecdc2" class="bulleted-list"><li style="list-style-type:disc">Locaux</li></ul><ul id="a767e2e5-2f99-467f-951f-87b61326bcef" class="bulleted-list"><li style="list-style-type:disc">ressources financières ⇒ argent</li></ul><ul id="acdb3ad0-881a-4ab5-a121-f9024750c91f" class="bulleted-list"><li style="list-style-type:disc">BFR (besoin en fonds de roulement) = Besoin de FRic ⇒ C’est l’argent nécessaire pour financer l’activité de l’entreprise (entre le moment ou on paye le fournisseur et celui ou on a le paiement du client.<blockquote id="206b34a6-6ae9-4ac2-a481-8bfabf72f35b" class=""><strong><span style="border-bottom:0.05em solid">Explication du BFR : </span></strong><figure id="35c348bd-c5b5-44a5-a053-acd4fd129309" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-11_a_13.50.22.png"><img style="width:680.0087280273438px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-09-11_a_13.50.22.png"/></a></figure><p id="115d1f3f-34b1-8055-83fa-f98090c81189" class=""><strong><span style="border-bottom:0.05em solid">Explication de la RFR (Ressource en Fonds de Roulement)</span></strong></p><figure id="115d1f3f-34b1-8075-9333-e1a8ee0171b2" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-10-04_a_09.39.28.png"><img style="width:672.9948120117188px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2024-10-04_a_09.39.28.png"/></a></figure></blockquote></li></ul><ul id="fb952a5b-2c4b-488b-bdf0-fd3f3a22d6b9" class="bulleted-list"><li style="list-style-type:disc">Réseau de fournisseurs et de partenaires</li></ul><ul id="e79347d5-a13a-4c69-bfc5-74a6374fb003" class="bulleted-list"><li style="list-style-type:disc">etc.</li></ul><h2 id="bf53319b-3c4a-4e32-bd4a-6fac1e9d91dc" class="">Les ressources financières</h2><p id="bf4b2301-ddb5-41f2-b211-13ee310f1360" class="">Pour pouvoir obtenir tout ce dont nous avons besoins, il va falloir que nous trouvions des financeurs.</p><ul id="71a0eb5c-3db8-4674-9406-9451f1b0277a" class="bulleted-list"><li style="list-style-type:disc">Investisseurs : les premiers investisseurs sont les associés qui créent l’entreprise et apportent le capital (fonds propres). Ensuite, nous pourrons faire appel à des financeurs externes (pas pour la SARL) en faisant des appels de fonds ou crowdfunding .</li></ul><ul id="2715c7ce-3414-49f6-a81e-4bc506750ad1" class="bulleted-list"><li style="list-style-type:disc">Les associés qui peuvent “placer” de l’argent dans l’entreprise, en “compte courant d’associé”, un compte comptable dans lequel on répertorie les dettes que la société a envers ses associés.<p id="e9d9e4c9-8f82-44aa-bf4b-6baeac20819a" class="">Il peut également “apporter” de l’argent en ne touchant pas ce que l’entreprise lui doit.</p></li></ul><ul id="89019cb5-7787-4224-8983-40b606ee215f" class="bulleted-list"><li style="list-style-type:disc">banque : on peut faire un emprunt auprès de la banque pour financer des projets</li></ul><ul id="aa881a75-5ce8-464c-be40-ae4dde149b42" class="bulleted-list"><li style="list-style-type:disc">subventions obtenues auprès du département, de la région ou même de la commune. Certaines activités qui bénéficient de fonds dédiés. En fonction de ce dont on a besoin d’acheter, certaines organismes peuvent aider au financement (ex : OPPBTP permet de financer des achats d’outils permettant d’améliorer la sécurité et la santé des salariés)</li></ul><ul id="8f688c97-8008-4d8d-95dd-9d5b1275ff31" class="bulleted-list"><li style="list-style-type:disc">Les fournisseurs : négocier des délais de paiement permet de réduire le BFR.</li></ul><ul id="813aba1b-f9d4-4021-bc59-a8ba44f849ac" class="bulleted-list"><li style="list-style-type:disc">Activité de l’entreprise</li></ul><h1 id="c502bce3-d9b1-486d-8cae-fa002085397e" class="">L’organisation comptable de notre entreprise</h1><p id="b001e43d-77aa-46e5-9c4a-57cf038529eb" class="">Toutes les entreprises non sont pas soumises aux mêmes règles fiscales et comptables.</p><ul id="4f2bfb21-391b-415a-b3fe-b7953c70a087" class="bulleted-list"><li style="list-style-type:disc">Micro ou auto entreprises : les obligations comptables sont allégées : le micro ou auto-entrepreneur n’aura l’obligation que de tenir un registre des ventes et un registre des achats. Bien entendu, il devra également déclarer son chiffre d’affaires pour pouvoir payer ses impôts et charges sociales.</li></ul><ul id="e5bd4375-a8ad-4395-a85b-7b4ebd06b3bd" class="bulleted-list"><li style="list-style-type:disc">Réel (simplifié ou normal) : les entreprises ou sociétés soumises aux régimes réel doivent obligatoirement<ul id="732eb6ea-e857-4ac7-8571-1bf9ac602a8c" class="bulleted-list"><li style="list-style-type:circle">Tenir une comptabilité : répertorier tous les évènements économiques qui auront lieu dans l’entreprise, en respectant les règles du plan comptable général.</li></ul><ul id="86f0658e-edcd-4b02-a8e1-26d7ce62310e" class="bulleted-list"><li style="list-style-type:circle">Etablir un bilan : un état des lieux (une photo) du patrimoine de l’entreprise (tout ce que l’entreprise possède et tout ce qu’elle doit)</li></ul><ul id="70656e5e-7ee1-4f0c-8ba9-ce6ea12bc12e" class="bulleted-list"><li style="list-style-type:circle">Etablir un compte de résultat : un registre (un film) de tout ce que l’entreprise a fait durant son exercice comptable (*)<p id="d7c9d172-12b8-4d2b-8b48-3a3f208976f9" class="">(* exercice comptable : d’une durée en général d’un an → 12 mois, ce sera une période d’observation de l’activité de l’entreprise. On coupera l’activité de l’entreprise en exercices comptables de 12 mois, pour pouvoir les comparer les uns aux autres, et observer l’efficience financière de l’entreprise. Exercice comptable = année fiscale)</p></li></ul><p id="9e352e09-d371-480c-8254-6fc1f2b59fec" class="">Selon le régime (normal ou simplifié), des documents complémentaires peuvent être demandés.</p><p id="1d0b7847-d4b0-419f-8199-49e73c6b531a" class="">Dans le module de gestion financière, nous nous occuperons uniquement du bilan et du compte de résultat.</p></li></ul><p id="0b777feb-3917-4ad4-96c6-0507fdc7540a" class="">Notre entreprise étant une SAS, on optera pour un régime réel. On devra donc produire les documents de synthèse : bilan et compte de résultat.</p><h2 id="66c39828-8bb9-46f7-ba80-614697ebb00d" class="">Le bilan :</h2><p id="63aeefd6-c06f-4a6c-bc85-fb192a1361fa" class="">Le bilan est, avec le compte de résultat, un document de synthèse, c’est à dire l’un des deux documents émis par le comptable à la fin de l’exercice comptable, et qui permet de faire une photographie du patrimoine de l’entreprise.</p><p id="1d23ecf7-2c4b-4d7a-a87f-31ad5599d517" class="">Par patrimoine, on entend :</p><ul id="2bededf4-887f-4625-864c-8118f6c69342" class="bulleted-list"><li style="list-style-type:disc">Ce que l’entreprise <strong>possède.</strong></li></ul><ul id="5867895f-5ea9-4a58-9a70-b447bb2a5965" class="bulleted-list"><li style="list-style-type:disc">Ce que l’entreprise <strong>doit.</strong></li></ul><p id="de3fa175-c623-4dc6-b330-4a981b2d8da0" class="">Le bilan s’organise en tableau. Il comprend :</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2d23744e-5ad9-4490-878c-cd77eb8e6fe2"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">L’actif, ou les emplois : <br/>L’actif c’est ce qu’on a. On peut l’appeler “Emplois” par ce que c’est la façon dont on emploie notre argent<br/><p id="42c5c06a-9b50-4581-95ae-6dacb8c46420" class=""><span style="border-bottom:0.05em solid"><strong>Actif = Je possède = Emplois</strong></span></p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d947f6f5-2e64-4a83-93d5-fe3d63b54754"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Le passif, ou les ressources : <br/>C’est ce qu’on doit. On peut l’appeler “Ressources” car c’est là d’où proviennent nos ressources financière.<br/><p id="505a1d90-a710-4dce-9db0-ce6608f1c63f" class=""><span style="border-bottom:0.05em solid"><strong>Passif = Je dois = Ressources</strong></span></p></div></figure><hr id="fb167d46-887e-4c63-985b-c8892f923ea7"/><h2 id="fb16b45d-0ba1-48d1-8771-e186a21d131e" class="">Actif du bilan :</h2><p id="d981e78b-5c49-41c2-ade1-2e641981def1" class="">A l’actif du bilan, on y trouve tout ce que possède l’entreprise.</p><p id="618a2d43-1f37-47f1-a458-4b60977ae922" class="">Ainsi, on aura les catégories suivantes :</p><table id="5f2be54e-4f2a-44d9-a406-e518e8955e86" class="simple-table"><tbody><tr id="ffc8f1c8-506e-44eb-be87-835d7352610e"><td id="LDJC" class="" style="width:232.66666666666666px">Actif Immobilisé</td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="bcfe9262-5355-4e16-80b6-956bcac54dc9"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px">Immobilisations</td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="13ffd6b3-84b4-48c4-9d0e-43d1ea3093a8"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Immobilisations incorporelles</td></tr><tr id="380ca332-0cde-40ab-8ce9-f50753a433ea"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Immobilisations corporelles</td></tr><tr id="fdc474a3-b96a-438e-89f7-fcccd5e2f8b2"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Immobilisations financières</td></tr><tr id="1678e966-8cc1-456a-a0c8-33c8f8f11a76"><td id="LDJC" class="" style="width:232.66666666666666px">Actif Circulant</td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="6859eec2-d445-417f-9864-0886e44314fe"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px">Stocks</td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="e7153d6b-14df-414a-be2f-0b264d68f6cb"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Stocks de matières premières</td></tr><tr id="d725872c-c96d-4bf7-ba8d-9fe4e6c3b0c3"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Stocks de marchandises</td></tr><tr id="0c1ab464-bc3b-4485-9539-4377ae5782f0"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Stocks d’en cours de production</td></tr><tr id="859ecfde-f5f7-4c3d-8137-25ee600b571f"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Stocks de produits finis</td></tr><tr id="466e6853-6a41-4ca0-b64c-be09ecfcd80c"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px">Créances</td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="6ef014e1-979b-4fba-8a3c-9b13d60b909e"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Créances clients</td></tr><tr id="f0324c95-7f92-48cf-8bc7-0d6e0d7c96cb"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Créances fournisseurs</td></tr><tr id="58a20094-2764-40ee-adcc-e6b8db869ca6"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Créances fiscales et sociales</td></tr><tr id="5910a0b2-5fbf-4164-b3c6-698a57aac55e"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px">Disponibilités</td><td id="FM_E" class="" style="width:232.66666666666666px"></td></tr><tr id="b69f9c7b-2756-4424-a37c-bbe9b5f88fcd"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Valeurs Mobilières de placement</td></tr><tr id="60ecc157-b75b-451d-b3ce-b1e625c41051"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Banque</td></tr><tr id="aa67ac6f-ac52-4ae5-86ae-e6ddc9b7695e"><td id="LDJC" class="" style="width:232.66666666666666px"></td><td id="onO|" class="" style="width:232.66666666666666px"></td><td id="FM_E" class="" style="width:232.66666666666666px">Caisse</td></tr></tbody></table><h3 id="6942824c-b71f-49e8-baa9-19eab44cbe0f" class="">Définitions : </h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7daa8b8a-bae4-4b78-b607-54d3a7efa6a9"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Immobilisations :<br/><br/></strong></span>Une immobilisation est un bien durable (durée de vie <strong><span style="border-bottom:0.05em solid">probable</span></strong> de plus d’un an), d’un coût unitaire HT de plus de 500€, utile à l’activité de l’entreprise et non destiné  à la revente immédiate.<br/>Les 4 critères sont cumulatifs.<br/><br/>nb : une entreprise, si elle s’aperçoit que le bien ne convient pas, ou si elle en éprouve le besoin, peut revendre une immobilisation !!<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a8ab45d5-5988-4798-a3b4-7eb010074e63"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Immobilisation incorporelle :<br/><br/></strong></span>C’est une immobilisation qui n’est pas tangible, palpable. Elle n’a pas de corps. C’est un “droit” d’utilisation d’une chose, ou “droit” de faire quelque chose.<br/>Par exemple : <br/>Un logiciel, un brevet : on paye le droit d’utiliser la propriété intellectuelle d’un autre<br/>Une licence IV : c’est le droit qu’une entreprise a de vendre de l’alcool.<br/>Une franchise : c’est le droit d’utiliser un nom commercial<br/>Le fonds de commerce : c’est l’utilisation du savoir faire, de la fidélité de la clientèle, de l’emplacement, de la notoriété …<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a5344e3b-1393-41c6-8a23-65fa19b0440d"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Immobilisation corporelle :<br/><br/></strong></span>C’est une immobilisation qui est tangible, palpable. Elle a un corps. C’est un objet physique que l’on peut toucher.<br/>Par exemple :<br/>Lignes de caisse en magasin, véhicule de fonction, locaux, matériel informatique, terrain, aménagements, peinture …<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f9b59682-0d52-4bcc-83c3-6f21229b9736"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Immobilisation financière :<br/><br/></strong></span>C’est de l’argent qui va être immobilisé.<br/>Par exemple : <br/>L’entreprise veut faire un emprunt, elle est obligée d’acheter des parts sociales de sa banque.<br/>L’entreprise veut louer des locaux, et doit verser une caution.<br/>L’entreprise veut racheter un concurrent/partenaire, elle rachète les parts sociales<br/><p id="88c3c42a-3756-4275-a8e1-94239ac93f36" class="">L’entreprise a opté pour un régime fiscal des sociétés mères / filles (optimisation fiscale)<br/><br/></p><figure id="0d712d6f-0e74-4147-97f3-1f64aae62d4a" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.07.39.png"><img style="width:648.0208740234375px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.07.39.png"/></a></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f481ba9a-5f5b-472f-b375-8839b6fea785"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Différence entre marchandises, matières premières et produit fini :<br/><br/></strong></span>→ Marchandise : c’est un bien qui est acheté pour être revendu en l’état<br/>→ Matière première : c’est un produit brut qui sera transformé par l’entreprise en vue de sa revente.<br/>→ Produit fini : c’est les produits transformés qui sont vendus par l’entreprise.<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ee6d48ce-7aa4-490b-a52a-2a8d65eb2ae7"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>En cours de production :<br/><br/></strong></span>C’est une production (de bien ou de service) qui est commencée, non terminée, non facturée.<br/>Par exemple : <br/>- un maçon qui n’aura pas terminé un chantier à sa date de clôture comptable<br/>- un agriculteur qui n’aura pas récolté son champs à sa date de clôture comptable<br/>- Les chantiers de l’atlantique qui seront en cours de production d’un bateau (pour la partie non facturée uniquement)<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7aa4c0f1-13fa-4fb1-b7cf-31ca3abe13e8"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Créance :</strong></span><br/>C’est l’inverse d’une dette, c’est quelque chose que l’on me doit. C’est un droit que je possède sur l’argent qui est encore chez mon client/fournisseur/autre.<br/>Par exemple :<br/>→ Une facture émise au nom de mon client, en attente de règlement (créance client)p<br/>→ Un acompte versé à mon fournisseur. Il aura une créance envers mon entreprise de marchandise/matière première.<br/>→ Un salarié à qui un acompte a été versé a une créance de travail envers l’entreprise.<br/><br/><figure id="068d46d9-cf14-4bc3-afe4-995ea8f5f633" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-11-07_a_19.07.32.png"><img style="width:2346px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-11-07_a_19.07.32.png"/></a></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="19007d7a-cb0c-41a4-9228-d5377e4ed729"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Différence entre VMP et immobilisation financière :</strong></span><p id="185f47e0-2827-4f34-ba5d-727b87bfe245" class="">→ Les deux sont des placements (ex : achat de parts sociales, d’actions, de participation, de fonds de placements …)</p><p id="4a21c605-161b-4356-94ee-d352d7ad845a" class="">VMP : achat dans un but <span style="border-bottom:0.05em solid"><strong>spéculatif</strong></span> : on achète dans le but de générer des intérêts et de revendre rapidement avec plus value, avec une durée de moins d’un an.</p><p id="4b7d5f19-8374-45d2-87fa-d08711e78fe9" class="">Immobilisation financière : on achète avec un<span style="border-bottom:0.05em solid"><strong> objectif à long terme</strong></span> : ex : prise de pouvoir dans une entreprise concurrente.</p><p id="a286f22f-0eeb-4f8a-986c-cf6f76c78c66" class="">
+</p></div></figure><hr id="3c11291c-d73b-4fed-b839-f620151e144c"/><h2 id="50a43650-d70c-4e23-a131-4b99b84afaab" class="">Passif du bilan</h2><p id="fd09044c-6560-4a54-8837-b2eebb76696f" class="">Au passif du bilan, on y trouve tout ce que <span style="border-bottom:0.05em solid"><strong>doit</strong></span> l’entreprise. On l’appelle également “Ressources” : d’où proviennent les ressources financières de l’entreprise?</p><p id="be9c27ca-9fad-4c2c-96cd-12b43e90b61d" class="">Ainsi, on aura les catégories suivantes :</p><table id="27d1423c-ff88-45ac-8895-4b0111d8c1b6" class="simple-table"><tbody><tr id="dd52a565-f4bc-4baf-8f2b-1b0ab404733c"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px">Ressources internes = Ressources stables</th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px"></td></tr><tr id="01e792e0-65f7-42f6-b8cf-408aa8158f2e"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px">Capitaux propres</td><td id="rnh[" class="" style="width:232.66666666666666px"></td></tr><tr id="5f0cb4c3-d5c6-4f66-bf6f-64b618f2a413"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Capital social ou Capital individuel (*)</td></tr><tr id="f40a49d5-723f-463b-ba2d-ccebc9d2ca25"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Réserves (*)</td></tr><tr id="11ec1e03-40d4-4de9-bb6a-d3d4688933e6"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Report à nouveau (*)</td></tr><tr id="e4c75acd-818a-4568-8036-ebb50ecc6eb7"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Résultat de l’exercice qu’on vient de clôturer ⇒ se calcule dans le compte de résultat</td></tr><tr id="0b8a9399-1076-4fcf-b582-70dd35a63da6"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px">Ressources externes = passif circulant</th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px"></td></tr><tr id="6fc24767-5d9e-452f-858a-56793ab65662"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px">Dettes</td><td id="rnh[" class="" style="width:232.66666666666666px"></td></tr><tr id="a91588e8-6bec-4725-acad-5aee0ba07ca3"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Dettes auprès des établissements de crédit</td></tr><tr id="ee675394-e5c5-4a8c-a9e7-958f710855f6"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Dettes financières diverses (dont comptes courants d’associés)</td></tr><tr id="cf002da1-8d58-4f57-b65a-239248a08f8d"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Dettes auprès des fournisseurs</td></tr><tr id="2934898e-f722-44f6-a7f0-0216b5e6d682"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Dettes auprès des clients</td></tr><tr id="013fcccc-b305-4cce-b6f0-eafb519df496"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Dettes sociales et fiscales</td></tr><tr id="be6e1c01-b3a2-4ee8-aa67-5a3c2c29af33"><th id="TkHG" class="simple-table-header-color simple-table-header" style="width:232.66666666666666px"></th><td id="qg:@" class="" style="width:232.66666666666666px"></td><td id="rnh[" class="" style="width:232.66666666666666px">Autres dettes</td></tr></tbody></table><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ef6e0ce1-121c-4865-83f7-9f153b7aa6f9"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Capitaux propres :<br/><br/></strong></span>Ce sont les capitaux qui sont dûs aux <span style="border-bottom:0.05em solid"><strong>propri</strong></span>étaires de l’entreprise.</div></figure><figure id="d1249cf0-3423-4590-b0f3-16c199e3ee17" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.42.53.png"><img style="width:707.9861450195312px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.42.53.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="87750c2e-a12f-4d0f-8be8-ae9f71e23284"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Différence Capital social et capital individuel :<br/><br/></strong></span>Un capital <span style="border-bottom:0.05em solid"><strong>individuel</strong></span> est présent uniquement en entreprise <span style="border-bottom:0.05em solid"><strong>individuelle</strong></span>. Il se constitue au fur et à mesure des années. Il va se calculer en faisant la différence entre les bénéfices générés et les rémunérations prises par l’entrepreneur individuel. Le capital individuel va <span style="border-bottom:0.05em solid"><strong>bouger</strong></span> d’une année sur l’autre.<br/><br/>Un capital <br/><span style="border-bottom:0.05em solid"><strong>social</strong></span> est présent uniquement dans les <span style="border-bottom:0.05em solid"><strong>sociétés</strong></span>. Il se compose du capital apporté par les associés à la création de l’entreprise. Il restera <span style="border-bottom:0.05em solid"><strong>fixe</strong></span> tout au long des années, sauf en cas d’augmentation ou diminution décidés en assemblées générales par les associés (procédures lourdes)<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bed11c26-1ad5-4597-8cf1-f4cd95ae1651"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Réserves et report à nouveau (uniquement en société)<br/><br/></strong></span>C’est une partie des bénéfices antérieurs qui est laissée dans la société. <br/>On a différents types de réserves : <br/>- Réserve légale : plafonnée à 10% du capital social (5% du bénéfice jusqu’à atteindre le plafond de 10% du capital). C’est une obligation légale pour que les associés s’habituent à “laisser” une partie des bénéfices dans la société.<br/>- Réserves statutaires : ce sont des réserves décidées par les associés dans les statuts (acte de création de l’entreprise) qui va les obliger à laisser une part de bénéfice tous les ans dans la société.<br/>- Autres réserves : pas de plafond, pas de limites.<br/>- Report à nouveau : On y enregistre les déficits dégagés par la société. Les bénéfices futurs viennent “combler” le trou créé par ce déficit.<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ca705528-c570-460f-9a64-756901c61da5"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Dettes auprès des établissements de crédit : <br/><br/></strong></span>Cela regroupe les dettes auprès des banques. C’est à dire les emprunts (capital dû) et les découverts.<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e9d114a1-9048-4a63-8093-c8ab5d65c8ed"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Comptes courants d’associés : <br/><br/></strong></span>Un compte courant d’associé, c’est un compte comptable (pas un compte bancaire) qui va recenser les dettes qu’aura l’entreprise envers ses associés.<br/>Elle peut contracter une dette à plusieurs occasions : <br/>- un associé a une forte somme d’argent qu’il choisit de placer dans sa société plutôt qu’à la banque<br/>- un associé qui a du faire un achat pour l’entreprise mais qui n’avait pas la “carte bancaire” de l’entreprise<br/>- un associé qui perçoit une rémunération de la part de la société (gérant ou salarié) mais ne prendra pas la totalité (ex : rémunération de 1500€. L’associé prend 1000€ sur son compte en banque et laisse 500€ sur son compte courant d’associé)<br/>Le compte courant d’associé est <br/><span style="border-bottom:0.05em solid"><strong>individuel et nominatif.</strong></span><br/>Le compte courant d’associé ne peut PAS être négatif : l’associé ne DOIT pas avoir de dette envers la société, ça s’appelle de l’abus de bien social.<br/>Il est illimité dans le temps et en montant, tant que l’associé possède des parts sociales dans la société.<br/><figure id="ceb86ded-320d-43c0-88dc-f8e381af5d84" class="image"><a href="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.53.15.png"><img style="width:648.0208740234375px" src="T1C1%20-%20L%E2%80%99environnement%20e%CC%81conomique%20et%20comptable%20de%2009be66a2ef594385a5699391682ac979/Capture_decran_2023-10-20_a_14.53.15.png"/></a></figure></div></figure><h1 id="2e0a4663-476d-4b4e-b2e9-0221f4e2b17c" class="">Le compte de résultat</h1><p id="68165cc7-7dd2-438c-b2de-30e93582165b" class="">Le compte de résultat est un film de l’exercice comptable écoulé. Il va regrouper les produits et les charges pour pouvoir définir les résultats de l’entreprise.</p><p id="99b22caa-9723-4e7a-93b7-680cee3f6b4a" class="">Il existe 3 niveau de charges et produits :</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16cac61e-1c5a-491b-bcd1-d59acd572276"><div style="font-size:1.5em"><span class="icon">1️⃣</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Le niveau d’exploitation : <br/><br/></strong></span>Il regroupe tout ce qui touche au coeur de métier de l’entreprise (ex : une exploitation agricole va faire travailler la terre pour faire pousser des céréales, légumes, fruits ; ISME va exploiter son coeur de métier - la formation - pour apprendre à nos étudiants ; La centrale de Cordemais va exploiter ses moyens techniques pour fabriquer de l’electricité, etc.)<br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="30cbfdbc-3311-4589-8081-9d8f85735cf9"><div style="font-size:1.5em"><span class="icon">2️⃣</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Le niveau financier :<br/><br/></strong></span>Il va regrouper tout ce qui va être lié aux excédents ou aux besoins de trésorerie (ex : un excédent de trésorerie sera placé pour générer des intérêts de placement ; une entreprise qui voudra acheter une immobilisation réalisera un emprunt sur lequel elle paiera des intérêts ; …) <br/><br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e3bb6f64-c5ee-4fc5-aa20-df18c592e3a7"><div style="font-size:1.5em"><span class="icon">3️⃣</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Le niveau exceptionnel : <br/><br/></strong></span>Il va regrouper tout ce qui n’est pas habituel et régulier (dans les règles de bonne gestion) d’une entreprise. (ex : ce n’est pas dans les règles de bonne gestion de payer des pénalités de retard ; ce n’est pas habituel - dans son activité courante - pour une entreprise de vendre une immobilisation ; …)<br/><br/></div></figure><h3 id="a8c81f01-18ac-406c-abed-5d4c98b24390" class="">Les produits</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f604b424-0de4-4a08-a062-fb02f451dbe1"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Définition d’un produit :<br/><br/></strong></span>Un produit c’est une création de richesse. Ce sont toute la richesse créée par l’entreprise.</div></figure><p id="a7ccc3dc-a182-4e34-bc71-fb8088867e9e" class="">Parmi les produits, on y retrouve :</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="98fe8c46-cf0f-409a-9a83-5426bc56335b"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Produits d’exploitation : </strong></span>ce sont les créations de richesse générées par le coeur de métier<ul id="9d9ee874-c305-47bb-9664-e3ce112327cf" class="bulleted-list"><li style="list-style-type:disc">Ventes (biens - marchandises ou produits finis - et services - prestation de service ou prestation de travaux)</li></ul><ul id="3c342606-1984-420d-a434-9d630ae29a59" class="bulleted-list"><li style="list-style-type:disc">Produits annexes (transport, emballage, vente de produits résiduels, …)</li></ul><ul id="7967d082-46bf-4172-ba93-c8b9fb15e7c9" class="bulleted-list"><li style="list-style-type:disc">Production immobilisée (construction pour soi-même) ou auto-consommation (Consommation d’un produit qui est habituellement vendu par l’entreprise)</li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="12ee9290-b7aa-44fc-99ce-3dbe7328a00e"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Produits financiers :</strong></span> ce sont les créations de richesses liées à un excédent de trésorerie<ul id="ecc89afc-927c-4909-96fd-3a5e54bc8419" class="bulleted-list"><li style="list-style-type:disc">intérêts de placement</li></ul><ul id="02d28438-3904-4a85-9d93-dee3f14dd3ed" class="bulleted-list"><li style="list-style-type:disc">Escomptes obtenus (réduction financière accordée pour un paiement anticipé d’une facture fournisseur)</li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="220f2547-59ba-4022-9459-9db3e3674c0e"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Produits exceptionnels :</strong></span> c’est la richesse créée de façon inhabituelle ou irrégulière. <ul id="aed05ad6-5296-4229-b6a4-d7d917e3c516" class="bulleted-list"><li style="list-style-type:disc">Prix de vente d’immobilisation (Produit de cession d’élément d’actif)</li></ul><ul id="cb2db664-d050-4db2-949c-00a0b69aff19" class="bulleted-list"><li style="list-style-type:disc">Réception d’un paiement inattendu, erreur de paiement en notre faveur d’un client …</li></ul><ul id="edb350ed-23d2-4fc8-a0a0-2a1497ff07dd" class="bulleted-list"><li style="list-style-type:disc">Pénalités perçues pour des paiements en retard de clients.</li></ul></div></figure><h3 id="8456c349-72e5-40f8-9d2a-81a6d024aa05" class="">Les charges</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e439c7e0-44fc-44c1-af6c-0f2bd7d09add"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Définition d’une charge :</strong></span><p id="a4a64d2b-b155-4b82-921a-9815aee27348" class="">Les charges sont l’ensemble des <span style="border-bottom:0.05em solid"><strong>moyens</strong></span> humains, matériels et financiers <span style="border-bottom:0.05em solid"><strong>utilisés pour créer de la richesse.</strong></span><br/><br/></p></div></figure><p id="671eb979-6cbc-47b7-8e35-f33ee8d70118" class="">Parmi les charges, on y retrouve :</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d4946c98-58fd-4e4f-a8b1-7e55c6c91a4b"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"> <span style="border-bottom:0.05em solid"><strong>Charges d’exploitation :</strong></span> l’ensemble des besoins générés par l’activité de l’entreprise<ul id="233e74dc-90c8-465e-8a62-46a82cdb69b6" class="bulleted-list"><li style="list-style-type:disc">Marchandises ou matières premières</li></ul><ul id="d13c1b64-a04f-4f84-ab4a-ee94b34d488b" class="bulleted-list"><li style="list-style-type:disc">Energie (électricité, eau, carburant)</li></ul><ul id="63cf9685-2932-4b11-9171-03d9e867b0fc" class="bulleted-list"><li style="list-style-type:disc">Petites fournitures (entretien, administratives, petit matériel …)</li></ul><ul id="ff682910-f3a5-44d9-9126-45ef592c2834" class="bulleted-list"><li style="list-style-type:disc">Services = Charges externes<ul id="b427b593-dbd2-4af3-8958-0d5e9c2063b4" class="bulleted-list"><li style="list-style-type:circle">Loyers</li></ul><ul id="ebd4fd03-db50-4698-b943-286c475f49fe" class="bulleted-list"><li style="list-style-type:circle">entretien, réparations</li></ul><ul id="a451d67a-7c1d-4ef8-b9cc-5dca6c6af311" class="bulleted-list"><li style="list-style-type:circle">Assurances</li></ul><ul id="423c4b57-6e77-4ebf-a7b0-f69c903e7b2c" class="bulleted-list"><li style="list-style-type:circle">mise à jour de logiciels</li></ul><ul id="1f393dad-6914-4678-95a7-ca3c921b9380" class="bulleted-list"><li style="list-style-type:circle">Publicité, publications</li></ul><ul id="954d968a-8030-44d7-a791-0acef01b20a1" class="bulleted-list"><li style="list-style-type:circle">honoraires comptables, juridiques …</li></ul><ul id="502cde75-8bb3-4be0-8875-c66ca75290bc" class="bulleted-list"><li style="list-style-type:circle">téléphone, frais postaux </li></ul><ul id="2cfc3169-a1b5-4746-bcc9-776295e43b50" class="bulleted-list"><li style="list-style-type:circle">Frais de mission et réception</li></ul><ul id="74acc0d7-5736-4461-bb25-b7edd70c901d" class="bulleted-list"><li style="list-style-type:circle">…</li></ul></li></ul><ul id="84068685-7389-40c1-a7bb-4231e1282075" class="bulleted-list"><li style="list-style-type:disc">Impôts et taxes = tous les impôts hors impôts sur les bénéfices.</li></ul><ul id="734c5b4f-b734-4bf4-905a-a2a61dd3a3ef" class="bulleted-list"><li style="list-style-type:disc">Salaires bruts et charges sociales patronales (URSSAF, retraite, maladie, médecine du travail, mutuelles …)</li></ul><ul id="69a81c21-e9cb-4540-afe3-38b4d4591a04" class="bulleted-list"><li style="list-style-type:disc">Dotations aux amortissements et provisions (*)<p id="fc8d4889-c646-4338-90f5-322b98f68fe4" class="">ex : j’achète un ordinateur à 1000€ que je vais utiliser 4 ans.</p><p id="397533c6-32de-4995-a49d-ffc3ed8e27e3" class="">Est-ce qu’il est normal que les 1000€ soient supportés uniquement sur un seul exercice comptable (l’année de l’achat uniquement)? Non ! En comptabilité, on a un principe de séparation des exercices comptables, c’est à dire que chaque exercice doit recenser uniquement les produits et les charges qui lui incombent. Donc si j’achète un ordinateur qui sera utilisé sur plusieurs années , son coût sera réparti sur les années d’utilisation.</p><table id="6640f083-e0e5-4239-8209-2478ac432f38" class="simple-table"><tbody><tr id="201a3048-9fba-4e82-ac32-786ce32850af"><td id="p]@F" class="" style="width:305px">Ordinateur</td><td id=";x?b" class="" style="width:305px">1000€</td></tr><tr id="7e4a35e6-4908-4eb2-9074-bd45920af451"><td id="p]@F" class="" style="width:305px">Durée </td><td id=";x?b" class="" style="width:305px">4 ans</td></tr></tbody></table><table id="52fa7c12-8b2c-470a-bf64-f0da27c9727c" class="simple-table"><tbody><tr id="d468a6b3-dfe5-40da-913e-63171398ba8d"><td id="j^Nm" class="" style="width:203.33333333333334px">Année</td><td id="COmf" class="" style="width:203.33333333333334px">Base</td><td id="tzo_" class="" style="width:203.33333333333334px">Dotation aux amortissements</td></tr><tr id="b8af4f78-39e6-4f7c-bfd3-76df08c85b02"><td id="j^Nm" class="" style="width:203.33333333333334px">1</td><td id="COmf" class="" style="width:203.33333333333334px">1000</td><td id="tzo_" class="" style="width:203.33333333333334px">1000/4 = 250</td></tr><tr id="43f4ae35-2306-4cdd-a8f2-8740f0684db8"><td id="j^Nm" class="" style="width:203.33333333333334px">2</td><td id="COmf" class="" style="width:203.33333333333334px">1000</td><td id="tzo_" class="" style="width:203.33333333333334px">1000/4 = 250</td></tr><tr id="05de2af4-9690-41d7-bca0-74adf4afc60c"><td id="j^Nm" class="" style="width:203.33333333333334px">3</td><td id="COmf" class="" style="width:203.33333333333334px">1000</td><td id="tzo_" class="" style="width:203.33333333333334px">1000/4 = 250</td></tr><tr id="2717fe59-97f6-467a-967c-3e2a3d003e00"><td id="j^Nm" class="" style="width:203.33333333333334px">4</td><td id="COmf" class="" style="width:203.33333333333334px">1000</td><td id="tzo_" class="" style="width:203.33333333333334px">1000/4 = 250</td></tr></tbody></table><p id="74c922fc-01e7-467a-b347-dcbb5502dd90" class="">Tous les ans, on aura en charge 1/4 (soit 25%) de la valeur du bien pour prendre en compte l’usure ou l’utilisation de cette immobilisation.</p></li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2336e199-516f-4004-a5da-c676dad516bc"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><span style="border-bottom:0.05em solid"><strong>Charges financières :</strong></span> Charges liées à un besoin d’argent<ul id="39131d4b-c0bb-4536-bd70-fad6388ca020" class="bulleted-list"><li style="list-style-type:disc">intérêts d’emprunt</li></ul><ul id="9a6f3d85-a2b1-4005-aad4-71bc3b0b5965" class="bulleted-list"><li style="list-style-type:disc">intérêts de découvert = Agios</li></ul><ul id="81c160e6-5114-48b2-acda-9970104a960c" class="bulleted-list"><li style="list-style-type:disc">Escompte accordé</li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d4e9ea13-cdcd-40ed-91ab-644c12c2f91f"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Charges exceptionnelles<ul id="ef54c645-217e-422c-a2c9-27094f7edc93" class="bulleted-list"><li style="list-style-type:disc">Pénalités retard et amendes</li></ul><ul id="9163131e-15f9-43c6-9d2b-bba8b766c525" class="bulleted-list"><li style="list-style-type:disc">Valeur résiduelle en comptabilité (Valeur Nette Comptable) des immobilisations vendues : Valeur qui reste à amortir d’une immobilisation qu’on vend.</li></ul></div></figure><h3 id="275e3c3e-5f3c-4d94-86a9-4c4d7c035417" class="">Calculer les résultats</h3><p id="e18c76db-f756-451d-b3ca-9e6469a7c298" class="">Il existe 4 types de résultats :</p><h3 id="54efa156-0966-4bc2-8f05-ab15e6148991" class="">Le résultat d’exploitation</h3><p id="95707d9c-3a48-4853-b084-1eb76b311f76" class="">Résultat d’exploitation = Produits d’exploitation - Charges d’exploitation</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="490be6a0-bb88-46b1-95a7-5d6f1f2c48c3"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Il correspond à ce que l’entreprise gagne sur son activité principale, sur son coeur de métier.<br/>→ Si le résultat d’exploitation est positif, cela signifie que l’entreprise gagne de l’argent, et génère des bénéfices sur son activité principale, sur son coeur de métier.<br/>→ Si le résultat d’exploitation est négatif, cela signifie que l’entreprise n’est pas rentable sur son coeur de métier, et qu’il va falloir trouver des solutions pour améliorer la situation.<br/><br/></div></figure><h3 id="b678746f-3e17-4f50-a629-57b07354284b" class="">Le résultat financier</h3><p id="438bf1aa-efca-4e11-804f-8e4b94ded4a9" class="">Résultat financier = Produits financiers - Charges financières</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2b5f4b2e-dd53-4a81-9e15-d2324b8876e9"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Il correspond à ce que l’entreprise gagne grâce à ses excédents de trésorerie, moins ce qu’elle paye à cause de ses besoins de trésorerie.<br/>→ Si le résultat financier est positif, cela signifie qu’elle est en bonne santé financière : elle a généré plus d’intérêts de placements et/ou escompte obtenus qu’elle n’a payé d’intérêts d’emprunt, de découvert et/ou accordé d’escomptes.<br/>→ Si le résultat financier est négatif, cela signifie qu’elle a eu plus d’intérêts à payer qu’elle n’a reçu d’intérêts de placement. Cette situation, dans la mesure du raisonnable, est totalement normale.<br/><br/></div></figure><h3 id="20e79e77-05f0-45f8-9e6e-97fad39e5c5e" class="">Le résultat exceptionnel</h3><p id="89077fc5-58bd-4f2c-a3f3-21e8151b3e5e" class="">Résultat exceptionnel = Produits exceptionnels - Charges exceptionnelles</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b2a4ad75-dfff-4b87-a0b3-558c73b811e6"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Il correspond à un “bonus” ou “malus” pour l’entreprise<br/>Il peut cependant donner des indications de gestion de l’entreprise : <br/>→ Si on a beaucoup de pénalités de retard cela indique un problème au niveau de la gestion de l’entreprise et probablement au niveau de la trésorerie.<br/>→ Si on a un résultat particulièrement haut, dû à des pénalités facturées aux clients, cela indique probablement un problème au niveau des conditions de paiement et de la politique de relance. <br/></div></figure><h3 id="d91a20c4-b0df-424a-8d0c-82cba7cf0997" class="">Le résultat de l’exercice</h3><p id="96f803aa-c21e-4e2f-aeb7-e13e780f2ee0" class="">Résultat de l’exercice = Résultat d’exploitation + Résultat financier + Résultat exceptionnel</p><p id="90b8cbd6-aab4-4b55-af36-72f6d953b71e" class="">ou</p><p id="626833b6-16c4-41a6-85a7-3f26bfef5267" class="">Résultat de l’exercice = Total des produits - Total des charges</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="adaceec3-e0cf-40ba-b07e-4aae489f7a7e"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">Il correspond à ce que gagne (ou perd) réellement l’entreprise à la fin de son exercice comptable.<br/>C’est la base de calcul de l’impôt (sur le revenu pour les entreprises individuelles ou sur les sociétés pour les sociétés)<br/><br/></div></figure><h1 id="6fac325c-615e-4ac0-ab7d-ebc64ac287bd" class="">Application : </h1><figure id="b538ebb2-fb68-4a2b-9211-f1dade5166c1"><div class="source">https://www.figma.com/file/vtHVwOlkUGdyttYotrNPx3/NGPME1-20231123?type=whiteboard&amp;t=9UeO2264rthQCysg-1</div></figure><figure id="f160be31-84c6-4603-8a5d-2dd19b55a5c8" class="link-to-page"><a href="https://www.notion.so/Application-f160be3184c646038a5d2dd19b55a5c8?pvs=21">Application</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
